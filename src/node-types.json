@@ -1,0 +1,211 @@
+[
+  {
+    "type": "au_delimiter",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "au_initial",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "author",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "au_initial",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "authorship",
+    "named": true,
+    "fields": {
+      "orig": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "(",
+            "named": false
+          },
+          {
+            "type": ")",
+            "named": false
+          },
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "au_delimiter",
+            "named": true
+          },
+          {
+            "type": "author",
+            "named": true
+          },
+          {
+            "type": "authorship",
+            "named": true
+          },
+          {
+            "type": "year",
+            "named": true
+          }
+        ]
+      },
+      "revision": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "au_delimiter",
+            "named": true
+          },
+          {
+            "type": "author",
+            "named": true
+          },
+          {
+            "type": "year",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "binomial",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "genus",
+          "named": true
+        },
+        {
+          "type": "species",
+          "named": true
+        },
+        {
+          "type": "subgenus",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "genus",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "binomial",
+          "named": true
+        },
+        {
+          "type": "tail",
+          "named": true
+        },
+        {
+          "type": "uninomial",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "species",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "authorship",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subgenus",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "uninomial",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "genus",
+          "named": true
+        },
+        {
+          "type": "subgenus",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\n",
+    "named": false
+  },
+  {
+    "type": "&",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "tail",
+    "named": true
+  },
+  {
+    "type": "year",
+    "named": true
+  }
+]

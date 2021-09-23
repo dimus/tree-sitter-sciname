@@ -1,0 +1,59 @@
+=====================
+Uninomial
+=====================
+
+Bubo
+
+---------------------
+
+(source_file (uninomial))
+
+=====================
+Subgenus
+=====================
+
+Bubo (Bubo)
+
+---------------------
+
+(source_file (uninomial (genus) (subgenus)))
+
+=====================
+Binomial
+=====================
+
+Bubo bubo
+
+---------------------
+
+(source_file (binomial (genus) (species)))
+
+======================
+Binomial with Subgenus
+======================
+
+Drosophila (Sophophora) melanogaster
+
+---------------------
+
+(source_file (binomial (genus) (subgenus) (species)))
+
+=====================================
+Binomial with Subgenus and Authorship
+=====================================
+
+Drosophila (Drosophila) melanogaster Meigen, 1830 
+
+---------------------
+
+(source_file (binomial (genus) (subgenus) (species (authorship (author) (year)))))
+
+===================================================
+Binomial with Subgenus and Authorship and Unparsed
+===================================================
+
+Drosophila (Drosophila) melanogaster Meigen, 1830 something else
+
+---------------------
+
+(source_file (binomial (genus) (subgenus) (species (authorship (author) (year)))) (tail))

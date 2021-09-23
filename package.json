@@ -1,0 +1,30 @@
+{
+  "name": "tree-sitter-sciname",
+  "version": "1.0.0",
+  "description": "Parser of scientific bio-names",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "tree-sitter test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gnames/tree-sitter-sciname.git"
+  },
+  "keywords": [
+    "biodiversity",
+    "scientific",
+    "name"
+  ],
+  "author": "Dmitry Mozzherin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gnames/tree-sitter-sciname/issues"
+  },
+  "homepage": "https://github.com/gnames/tree-sitter-sciname#readme",
+  "dependencies": {
+    "nan": "^2.15.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.0"
+  }
+}
