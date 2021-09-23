@@ -22,14 +22,14 @@ module.exports = grammar({
 
     authorship: ($) =>
       choice(
-        field('orig', $._au_paren),
-        field('orig', $._au),
-        seq(field('orig', $._au_paren), field('revision', $._au))
+        field('orig', $.authors_paren),
+        field('orig', $.authors),
+        seq(field('orig', $.authors_paren), field('revision', $.authors))
       ),
 
-    _au_paren: ($) => seq('(', $.authorship, ')'),
+    authors_paren: ($) => seq('(', $.authorship, ')'),
 
-    _au: ($) =>
+    authors: ($) =>
       seq(
         $.author,
         repeat(seq($.au_delimiter, $.author)),
@@ -43,7 +43,7 @@ module.exports = grammar({
 
     au_initial: ($) => seq($._author, optional('.')),
 
-    _author: (_) => /[A-Za-z\-]+/,
+    _author: (_) => /[A-Z][A-Za-z\-]+/,
 
     _uninomial: (_) => /[A-Z][a-z]+/,
 

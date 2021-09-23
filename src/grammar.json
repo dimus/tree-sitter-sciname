@@ -149,7 +149,7 @@
           "name": "orig",
           "content": {
             "type": "SYMBOL",
-            "name": "_au_paren"
+            "name": "authors_paren"
           }
         },
         {
@@ -157,7 +157,7 @@
           "name": "orig",
           "content": {
             "type": "SYMBOL",
-            "name": "_au"
+            "name": "authors"
           }
         },
         {
@@ -168,7 +168,7 @@
               "name": "orig",
               "content": {
                 "type": "SYMBOL",
-                "name": "_au_paren"
+                "name": "authors_paren"
               }
             },
             {
@@ -176,14 +176,14 @@
               "name": "revision",
               "content": {
                 "type": "SYMBOL",
-                "name": "_au"
+                "name": "authors"
               }
             }
           ]
         }
       ]
     },
-    "_au_paren": {
+    "authors_paren": {
       "type": "SEQ",
       "members": [
         {
@@ -200,7 +200,7 @@
         }
       ]
     },
-    "_au": {
+    "authors": {
       "type": "SEQ",
       "members": [
         {
@@ -293,7 +293,7 @@
     },
     "_author": {
       "type": "PATTERN",
-      "value": "[A-Za-z\\-]+"
+      "value": "[A-Z][A-Za-z\\-]+"
     },
     "_uninomial": {
       "type": "PATTERN",

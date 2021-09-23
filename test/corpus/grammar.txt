@@ -45,8 +45,7 @@ Binomial with Subgenus and Authorship
 Drosophila (Drosophila) melanogaster Meigen, 1830 
 
 ---------------------
-
-(source_file (binomial (genus) (subgenus) (species (authorship (author) (year)))))
+(source_file (binomial (genus) (subgenus) (species (authorship (authors (author) (year))))))
 
 ===================================================
 Binomial with Subgenus and Authorship and Unparsed
@@ -56,4 +55,4 @@ Drosophila (Drosophila) melanogaster Meigen, 1830 something else
 
 ---------------------
 
-(source_file (binomial (genus) (subgenus) (species (authorship (author) (year)))) (tail))
+ (source_file (binomial (genus) (subgenus) (species (authorship (authors (author) (year))))) (tail))

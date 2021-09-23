@@ -25,61 +25,67 @@
     }
   },
   {
+    "type": "authors",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "au_delimiter",
+          "named": true
+        },
+        {
+          "type": "author",
+          "named": true
+        },
+        {
+          "type": "year",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "authors_paren",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "authorship",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "authorship",
     "named": true,
     "fields": {
       "orig": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "au_delimiter",
+            "type": "authors",
             "named": true
           },
           {
-            "type": "author",
-            "named": true
-          },
-          {
-            "type": "authorship",
-            "named": true
-          },
-          {
-            "type": "year",
+            "type": "authors_paren",
             "named": true
           }
         ]
       },
       "revision": {
-        "multiple": true,
+        "multiple": false,
         "required": false,
         "types": [
           {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "au_delimiter",
-            "named": true
-          },
-          {
-            "type": "author",
-            "named": true
-          },
-          {
-            "type": "year",
+            "type": "authors",
             "named": true
           }
         ]
