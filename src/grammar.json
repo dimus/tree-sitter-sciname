@@ -20,6 +20,10 @@
             },
             {
               "type": "SYMBOL",
+              "name": "multinomial"
+            },
+            {
+              "type": "SYMBOL",
               "name": "binomial"
             }
           ]
@@ -65,6 +69,10 @@
       ]
     },
     "binomial": {
+      "type": "SYMBOL",
+      "name": "_binomial"
+    },
+    "_binomial": {
       "type": "CHOICE",
       "members": [
         {
@@ -99,6 +107,22 @@
         }
       ]
     },
+    "multinomial": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_binomial"
+        },
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_infraspecies"
+          }
+        }
+      ]
+    },
     "genus": {
       "type": "SYMBOL",
       "name": "_uninomial"
@@ -124,8 +148,12 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "_species"
+          "type": "FIELD",
+          "name": "sp",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_sp_epithet"
+          }
         },
         {
           "type": "CHOICE",
@@ -140,6 +168,72 @@
           ]
         }
       ]
+    },
+    "_infraspecies": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "rank"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "infraspecies"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "authorship"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "infraspecies": {
+      "type": "SYMBOL",
+      "name": "_sp_epithet"
+    },
+    "rank": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "_rank_ssp"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_rank_forma"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_rank_var"
+        }
+      ]
+    },
+    "_rank_var": {
+      "type": "PATTERN",
+      "value": "variety|\\[var\\.\\]|var\\.?"
+    },
+    "_rank_forma": {
+      "type": "PATTERN",
+      "value": "forma|(fma|fm|form|fo|f)\\.?"
+    },
+    "_rank_ssp": {
+      "type": "PATTERN",
+      "value": "(subspec|subsp|ssp)\\.?"
     },
     "authorship": {
       "type": "CHOICE",
@@ -299,7 +393,7 @@
       "type": "PATTERN",
       "value": "[A-Z][a-z]+"
     },
-    "_species": {
+    "_sp_epithet": {
       "type": "PATTERN",
       "value": "[a-z]+"
     },

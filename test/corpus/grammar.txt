@@ -51,8 +51,38 @@ Drosophila (Drosophila) melanogaster Meigen, 1830
 Binomial with Subgenus and Authorship and Unparsed
 ===================================================
 
-Drosophila (Drosophila) melanogaster Meigen, 1830 something else
+Drosophila (Drosophila) melanogaster Meigen, 1830 Something else
 
 ---------------------
 
  (source_file (binomial (genus) (subgenus) (species (authorship (authors (author) (year))))) (tail))
+
+===================================================
+Multinomial without Rank and Authorship
+===================================================
+
+Lepidocaryum tenue sexpartitum
+
+---------------------
+
+(source_file (multinomial (genus) (species) (infraspecies)))
+
+===================================================
+Multinomial with Rank
+===================================================
+
+Lepidocaryum tenue var. sexpartitum
+
+---------------------
+
+(source_file (multinomial (genus) (species) (rank) (infraspecies)))
+
+===================================================
+Multinomial with Rank and Authorship
+===================================================
+
+Lepidocaryum tenue var. sexpartitum Linn
+
+---------------------
+
+(source_file (multinomial (genus) (species) (rank) (infraspecies)))

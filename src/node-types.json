@@ -121,6 +121,51 @@
     "fields": {}
   },
   {
+    "type": "infraspecies",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "multinomial",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "authorship",
+          "named": true
+        },
+        {
+          "type": "genus",
+          "named": true
+        },
+        {
+          "type": "infraspecies",
+          "named": true
+        },
+        {
+          "type": "rank",
+          "named": true
+        },
+        {
+          "type": "species",
+          "named": true
+        },
+        {
+          "type": "subgenus",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rank",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "source_file",
     "named": true,
     "fields": {},
@@ -130,6 +175,10 @@
       "types": [
         {
           "type": "binomial",
+          "named": true
+        },
+        {
+          "type": "multinomial",
           "named": true
         },
         {
